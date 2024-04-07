@@ -1,0 +1,1 @@
+Atividades da aula 04/04/2024 sobre manipulação de datas em Java, nessa aula foi feito o estudo sobre as classes: Date, DateFormat, Calendar, GregorianCalendar, SimpleDateFormat e LocalDate. Logo após os estudos foram realisados duas atividades
