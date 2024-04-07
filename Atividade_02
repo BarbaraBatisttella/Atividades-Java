@@ -1,0 +1,23 @@
+import java.time.LocalDate;
+import java.time.Period;
+
+public class CalculadoraDoTempo {
+    
+    public static void main(String[] args) {
+        contagemDoTempo(30, 12, 2024); 
+    }
+
+    public static void contagemDoTempo(int dia, int mes, int ano) {
+        LocalDate dataAtual = LocalDate.now();
+        LocalDate dataFutura = LocalDate.of(ano, mes, dia);
+
+        Period periodo = Period.between(dataAtual, dataFutura);
+
+        int anos = periodo.getYears();
+        int meses = periodo.getMonths();
+        int dias = periodo.getDays();
+
+        System.out.println("Faltam " + anos + " anos, " + meses + " meses e " + dias + " dias para a data " +
+                           dia + "/" + mes + "/" + ano + " a partir da data atual do sistema.");
+    }
+}
