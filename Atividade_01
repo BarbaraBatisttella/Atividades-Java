@@ -1,0 +1,28 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class DataExtenso {
+    
+    public static void main(String[] args) {
+        System.out.println(obterDataExtenso());
+    }
+
+    public static String obterDataExtenso() {
+        LocalDate hoje = LocalDate.now();
+        LocalDateTime agora = LocalDateTime.now();
+        
+        String diaSemana = hoje.getDayOfWeek().name();
+        String mes = hoje.getMonth().name();
+        int dia = hoje.getDayOfMonth();
+        int ano = hoje.getYear();
+        int hora = agora.getHour();
+        int minutos = agora.getMinute();
+
+        String dataExtenso = "Hoje é " + diaSemana.toLowerCase().substring(0, 1).toUpperCase() + diaSemana.toLowerCase().substring(1) +
+                                ", dia " + dia + " de " + mes.toLowerCase().substring(0, 1).toUpperCase() + mes.toLowerCase().substring(1) +
+                                " de " + ano + " e agora são " + hora + " horas e " + minutos + " minutos.";
+
+        return dataExtenso;
+    }
+}
